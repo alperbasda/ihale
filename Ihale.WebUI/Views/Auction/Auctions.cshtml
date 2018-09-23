@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Auctions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Hesabım</a></li>
+        <li><a href="#">İlanlarım</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+            <h2 class="title">İlanlarım</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td class="text-center">Resim</td>
+                            <td class="text-left">Ürün Adı</td>
+                            <td class="text-left">Özellikler</td>
+                            <td class="text-right">Bitiş Tarihi</td>
+                            <td class="text-right">Fiyat</td>
+                            <td class="text-right">Detay</td>
+                            <td class="text-right">Sil</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html">
+                                    <img width="70px" src="../../Content/image/demo/shop/product/18.jpg" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop">
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="product.html">iPad</a>
+                            </td>
+                            <td class="text-left">-özellik <br />-özellik</td>
+                            <td class="text-right">
+                                <span> 21/09/2018 <br/>(Bitti)</span>
+                            </td>
+                            <td class="text-right">
+                                <div class="price"> <span class="price-new">45 ₺ - 90 ₺</span></div>
+                            </td>
+                            <td class="text-right">
+                                <button class="btn btn-primary"
+                                        title="" data-toggle="tooltip"
+                                        type="button" data-original-title="Tekrar Et">
+                                    <i class="fa fa-recycle"></i>
+                                </button>
+                                <a class="btn btn-success" href="@Url.Action("AuctionOffers","Offer")"><i class="fa fa-magic"></i> Teklifleri Gör</a>
+                            </td>
+                            <td class="text-right">
+
+                                <button class="btn btn-danger"
+                                        title="" data-toggle="tooltip"
+                                        type="button" data-original-title="Sil">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html">
+                                    <a href="product.html"><img width="70px" src="../../Content/image/demo/shop/product/E1.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes"></a>
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="product.html">iPad</a>
+                            </td>
+                            <td class="text-left">-özellik <br />-özellik</td>
+                            <td class="text-right">
+                                <span>22/10/2018</span>
+                            </td>
+                            <td class="text-right">
+                                <div class="price"> <span class="price-new">45 ₺ - 90 ₺</span></div>
+                            </td>
+                            <td class="text-right">
+                                <a class="btn btn-success"  href="@Url.Action("AuctionOffers","Offer")" title="" data-toggle="tooltip" data-original-title="Teklifler Gör"><i class="fa fa-magic"></i> Teklifleri Gör</a>
+                            </td>
+                            <td class="text-right">
+
+                                <button class="btn btn-danger"
+                                        title="" data-toggle="tooltip"
+                                        type="button" data-original-title="Sil">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Middle Part End-->
+        @Html.Action("RightPartial","Account")
+    </div>
+</div>

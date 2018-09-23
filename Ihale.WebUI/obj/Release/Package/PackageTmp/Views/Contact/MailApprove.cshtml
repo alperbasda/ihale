@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "MailApprove";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container container-main">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Hesabım</a></li>
+        <li><a href="#">Mail Onayı</a></li>
+    </ul>
+
+    <div class="col-sm-9">
+        <div class="col-sm-12">
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Mail Onayla</legend>
+                    <p><a href="#">Mail Adresinize gelen şifreyi girerek mailinizi onaylayın</a></p>
+                </fieldset>
+            </form>
+            <br/>
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Onay Formu</legend>
+                    <div class="form-group required">
+                        <label for="input-password" class="control-label">Gelen Şifre</label>
+                        <input type="password" class="form-control" placeholder="Şifre" value="" name="Password">
+                    </div>
+
+                    <div class="buttons clearfix">
+                        <div class="pull-right">
+                            <input type="submit" class="btn btn-md btn-primary" value="Onayla">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <br/>
+
+        </div>
+
+    </div>
+
+    @Html.Action("RightPartial", "Account")
+</div>
+

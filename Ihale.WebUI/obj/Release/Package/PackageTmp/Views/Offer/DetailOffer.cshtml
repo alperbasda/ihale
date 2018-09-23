@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "DetailOffer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">İlanlarım</a></li>
+        <li><a href="#">Teklif Detayı</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+            <h2 class="title">Mıknatıslamaya Hazırsın !!!</h2>
+
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <td colspan="2" class="text-left">Sipariş Detayı</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;" class="text-left">
+                            <b>Ürün Adı:</b> IPhone 6s
+                            <br />
+                            <b>Ürün Özellikleri </b>
+                            <br />
+                            Özellik
+                            <br />
+                            Özellik
+                        </td>
+                        <td style="width: 50%;" class="text-left">
+
+                            <b>Teklif Fiyatı:</b> 350 ₺
+                            <br>
+                            <b>Teklif Açıklaması:</b> Teklif Açıklaması gelecek
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">Adres Bilgileri <a href="@Url.Action("Contact","Account")">Değiştir</a></td>
+                        <td style="width: 50%; vertical-align: top;" class="text-left">İletişim Bilgileri <a href="@Url.Action("Contact","Account")">Değiştir</a></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">
+                            <b>Kargo Adresim : </b> Kargo Adresi gelecek
+                            <br />
+                            <b>Fatura Adresim : </b> Fatura Adresi gelecek
+                        </td>
+                        <td class="text-left">
+                            <b>Telefon : </b> 0551 432 73 31
+                            <br />
+                            <b>Mail : </b> alperbasda@gmail.com
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Sipariş Durumu</h3>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <td class="text-left">Tarih</td>
+                        <td class="text-left">Durum</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">20/06/2018 23:40:20</td>
+                        <td class="text-left">İlan Yayınlandı</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">21/06/2018 23:55:20</td>
+                        <td class="text-left">Teklif Yapıldı</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">24/06/2018</td>
+                        <td class="text-left">Teslim Alındı</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons clearfix">
+                <div class="pull-right">
+                    <a class="btn btn-primary" onclick="alert('İşte bukadar bitti');" href="#">Mıknatısla</a>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--Middle Part End-->
+        @Html.Action("RightPartial","Account")
+    </div>
+</div>

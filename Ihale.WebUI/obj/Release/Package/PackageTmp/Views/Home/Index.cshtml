@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+<div class="container">
+    @Html.Action("SliderPartial", "SliderImage")
+    @Html.Action("HomePagePaidAuctions", "Auction")
+    @Html.Action("PopularCategoryPartial", "Category")
+    @Html.Action("HomePageBreakingAuctions", "Auction")
+    @Html.Action("HomePageBlogPartial", "Blog")
+</div>
+@section homeScripts
+{
+    <script src="~/Scripts/HomeScripts/homepage.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.afterTab1').eq(1).trigger("click");
+            $('.afterTab2').eq(1).trigger("click");
+        })
+    </script>
+}
+
+@section scripts
+{
+    <script src="~/Scripts/HomeScripts/ProductShowCount.js"></script>
+}

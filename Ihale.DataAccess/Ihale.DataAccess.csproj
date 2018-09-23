@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{143D95D3-F366-466C-89D0-0F6AF5455F2A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ihale.DataAccess</RootNamespace>
+    <AssemblyName>Ihale.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IAboutUsDal.cs" />
+    <Compile Include="Abstract\IAuctionDal.cs" />
+    <Compile Include="Abstract\IAuctionPhotoDal.cs" />
+    <Compile Include="Abstract\IBlogCommentDal.cs" />
+    <Compile Include="Abstract\IBlogDal.cs" />
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\ICategoryFilterDal.cs" />
+    <Compile Include="Abstract\ICategoryFilterDescriptionAuctionRelationDal.cs" />
+    <Compile Include="Abstract\ICategoryFilterDescriptionDal.cs" />
+    <Compile Include="Abstract\ICategoryFilterRelationDal.cs" />
+    <Compile Include="Abstract\ICityDal.cs" />
+    <Compile Include="Abstract\ICountryDal.cs" />
+    <Compile Include="Abstract\IMailNotificationDal.cs" />
+    <Compile Include="Abstract\IOfferDal.cs" />
+    <Compile Include="Abstract\IOfferPhotoDal.cs" />
+    <Compile Include="Abstract\IOurTeamDal.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
+    <Compile Include="Abstract\ISliderImageDal.cs" />
+    <Compile Include="Abstract\ISSSDal.cs" />
+    <Compile Include="Abstract\IUserAdressDal.cs" />
+    <Compile Include="Abstract\IUserCommentDal.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Abstract\IUserInRoleDal.cs" />
+    <Compile Include="Abstract\IUserMailDal.cs" />
+    <Compile Include="Abstract\IUserPasswordDal.cs" />
+    <Compile Include="Abstract\IUserTelDal.cs" />
+    <Compile Include="Concrete\EntityFramework\AboutUsDal.cs" />
+    <Compile Include="Concrete\EntityFramework\AuctionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\BlogCommentDal.cs" />
+    <Compile Include="Concrete\EntityFramework\BlogDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CategoryDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CategoryFilterDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CategoryFilterDescriptionAuctionRelationDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CategoryFilterDescriptionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CategoryFilterRelationDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CityDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Core\IhaleContext.cs" />
+    <Compile Include="Concrete\EntityFramework\MailNotificationDal.cs" />
+    <Compile Include="Concrete\EntityFramework\CountryDal.cs" />
+    <Compile Include="Concrete\EntityFramework\OfferDal.cs" />
+    <Compile Include="Concrete\EntityFramework\OfferPhotoDal.cs" />
+    <Compile Include="Concrete\EntityFramework\OurTeamDal.cs" />
+    <Compile Include="Concrete\EntityFramework\RoleDal.cs" />
+    <Compile Include="Concrete\EntityFramework\SliderImageDal.cs" />
+    <Compile Include="Concrete\EntityFramework\SSSDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserAdressDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserCommentDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserInRoleDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserMailDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserPasswordDal.cs" />
+    <Compile Include="Concrete\EntityFramework\UserTelDal.cs" />
+    <Compile Include="Migrations\201809230921043_First.cs" />
+    <Compile Include="Migrations\201809230921043_First.Designer.cs">
+      <DependentUpon>201809230921043_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ihale.Core\Ihale.Core.csproj">
+      <Project>{01263760-96F2-45BB-A1E7-68DED0BB22C9}</Project>
+      <Name>Ihale.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ihale.Entity\Ihale.Entity.csproj">
+      <Project>{556DF40B-6AAA-4F9E-86AF-B763056FD037}</Project>
+      <Name>Ihale.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809230921043_First.resx">
+      <DependentUpon>201809230921043_First.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

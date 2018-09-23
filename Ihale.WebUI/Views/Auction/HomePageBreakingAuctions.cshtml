@@ -1,0 +1,90 @@
+﻿<div class="row">
+    <div id="content" class="col-sm-12">
+
+        <div class="module tab-slider titleLine">
+            <h3 class="modtitle">Son Dakika</h3>
+            <div id="so_listing_tabs_2" class="so-listing-tabs first-load module">
+                <div class="loadeding"></div>
+                <div class="ltabs-wrap">
+                    <div class="ltabs-tabs-container" data-rtl="yes" data-delay="300" data-duration="600" data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="4" data-md="3" data-sm="2" data-xs="1" data-margin="30">
+                        <!--Begin Tabs-->
+                        <div class="ltabs-tabs-wrap">
+                            <span class="ltabs-tab-selected">Jewelry &amp; Watches	</span> <span class="ltabs-tab-arrow">▼</span>
+                            <div class="item-sub-cat">
+                                <ul class="ltabs-tabs cf">
+                                    <li class="ltabs-tab tab-sel" data-category-id="20" data-active-content=".items-category-20"> <span class="ltabs-tab-label">Jewelry &amp; Watches						</span> </li>
+                                    <li class="ltabs-tab " data-category-id="18" data-active-content=".items-category-18"> <span class="ltabs-tab-label">Electronics		</span> </li>
+                                    <li class="ltabs-tab " data-category-id="25" data-active-content=".items-category-25"> <span class="ltabs-tab-label">Sports &amp; Outdoors	</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Tabs-->
+                    </div>
+                    <div class="ltabs-items-container">
+                        <!--Begin Items-->
+                        <div class="ltabs-items ltabs-items-selected items-category-20 grid" data-total="10">
+                            <div class="ltabs-items-inner ltabs-slider ">
+                                @for (int i = 0; i < 6; i++)
+                                {
+                                    <div class="ltabs-item product-layout">
+                                        <div class="product-item-container">
+                                            <div class="left-block">
+                                                <div class="product-image-container second_img ">
+                                                    <img src="../../Content/image/demo/shop/product/10.jpg" alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                                </div>
+                                                <!--Sale Label-->
+                                                <span class="label label-sale">-30%</span>
+
+                                                <div class="countdown_box">
+                                                    <div class="countdown_inner">
+                                                        <div class="title">Kalan Süre </div>
+
+                                                        <div data-countdown="2019/03/13">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="right-block">
+                                                <div class="caption text-center">
+
+                                                    <h4><a href="product.html">Urun Adi</a></h4>
+                                                    <h5><b> Ozellik 1 : </b> Aciklama </h5>
+                                                    <h5><b> Ozellik 2 : </b> Aciklama </h5>
+                                                    <h5><b> Ozellik 3 : </b> Aciklama </h5>
+                                                    <h5><b> Ozellik 4 : </b> Aciklama </h5>
+                                                    <div class="price">
+                                                        <span class="price-new">70.00 ₺ - 200.00 ₺</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="button-group text-center">
+                                                    <a href="@Url.Action("AuctionDetail","Auction")"><button class="addToCart" type="button"><i class="fa fa-magnet"></i><span> Teklif Ver</span></button></a>
+                                                    @*<button class="addToCart" type="button" data-toggle="tooltip" title="Detay"><i class="fa fa-info"></i><span class="hidden-xs"> Detay</span></button>*@
+                                                </div>
+                                            </div><!-- right block -->
+                                        </div>
+                                    </div>
+                                }
+                                
+                            </div>
+
+                        </div>
+                        <div class="ltabs-items items-category-18 grid" data-total="11">
+                            <div class="ltabs-loading"></div>
+
+                        </div>
+                        <div class="ltabs-items  items-category-25 grid" data-total="11">
+                            <div class="ltabs-loading"></div>
+                        </div>
+                    </div>
+                    <!--End Items-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

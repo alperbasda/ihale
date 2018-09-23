@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+
+    <meta name="keywords" content="boostrap, responsive, html5, css3, jquery, theme, multicolor, parallax, retina, business" />
+    <link rel="shortcut icon" href="../img/favicon-2.ico" />
+    <link href="~/Content/HomeStyle/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/lib.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/miniColors.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/so_megamenu.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/so-categories.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/so-listing-tabs.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/so-newletter-popup.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/just_purchased_notification.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/footer1.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/header1.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/theme.css" rel="stylesheet" />
+    <link href="~/Content/HomeStyle/responsive.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    @RenderSection("head", required: false)
+    <title>Ürün Aramaya Son</title>
+</head>
+<body class="common-home res layout-home1">
+    <div class="container-fluid navbar-fixed-bottom" id="bottomfixed">
+        <div class="row text-center">
+            <div class="col-xs-4">
+                <a href="@Url.Action("Index","Home")"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="col-xs-4">
+                <a href="@Url.Action("Profil","Account")"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="col-xs-4">
+                <a data-toggle="modal" data-target="#miniSearch">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+<div id="wrapper" class="wrapper-full banners-effect-7">
+
+<!-- Header Container  -->
+<header id="header" class="variantleft type_1">
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="header-top-left form-inline col-sm-6 col-xs-12 ">
+
+                    <div class="form-group currencies-block">
+                        <a href="@Url.Action("Index","Home")" class="btn btn-xs dropdown-toggle">
+                            <strong> Ürün Almanın En Kolay Yolu</strong>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="header-top-right collapsed-block text-right  col-sm-6 col-xs-12">
+                    <div class="tabBlock" id="TabBlock-1">
+                        <ul class="top-link list-inline shopping_cart">
+                            <li class="account" id="my_account">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a href="#" title="My Account" class="btn btn-xs dropdown-toggle btn-group" data-toggle="dropdown"> <span>Hesabım</span> <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="@Url.Action("Profil", "Account")"><i class="fa fa-user"></i> Profilim</a></li>
+                                        <li><a href="@Url.Action("Auctions", "Auction")"><i class="fa fa-building"></i> İlanlarım</a></li>
+                                        <li><a href="@Url.Action("Offers", "Offer")"><i class="fa fa-truck"></i> Tekliflerim</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> Çıkış</a></li>
+
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <a href="#" title="My Account" class="btn btn-xs dropdown-toggle btn-group" data-toggle="dropdown"> <span>Giriş / Kayıt</span> <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu text-center">
+
+                                        <li><a href="@Url.Action("Register", "Account")"><i class="fa fa-user"></i> Kayıt Ol</a></li>
+                                        <li><a href="@Url.Action("Login", "Account")"><i class="fa fa-pencil-square-o"></i> Giriş</a></li>
+                                        <li><a href="@Url.Action("Profil", "Account")"><i class="fa fa-user"></i> Profilim</a></li>
+                                        <li><a href="@Url.Action("Auctions", "Auction")"><i class="fa fa-building"></i> İlanlarım</a></li>
+                                        <li><a href="@Url.Action("Offers", "Offer")"><i class="fa fa-truck"></i> Tekliflerim</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> Çıkış</a></li>
+                                    </ul>
+                                }
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //Header Top -->
+    <!-- Header center -->
+    <div class="header-center left">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="navbar-logo col-md-3 col-sm-12 col-xs-12">
+                    <a href="@Url.Action("Index","Home")"><img src="~/Content/image/demo/logos/theme_logo.png" title="Your Store" alt="Your Store" /></a>
+                </div>
+                <!-- //end Logo -->
+                <!-- Search -->
+                <div id="sosearchpro" class="col-sm-7 search-pro">
+                    <form method="GET">
+                        <div id="search0" class="search input-group">
+                            <div class="select_category filter_type icon-select">
+                                <select class="no-border" name="category_id">
+                                    <option value="0">Tüm Kategoriler &nbsp;&nbsp;&nbsp;</option>
+                                    <option value="1">Elektronik</option>
+                                    <option value="2">Giyim</option>
+                                    <option value="3">Ayakkabı</option>
+                                    <option value="4">Aksesuar</option>
+                                    <option value="5">Tekstil</option>
+                                </select>
+                            </div>
+
+                            <input class="autosearch-input form-control" type="text" value="" size="50" autocomplete="off" placeholder="Aramak istediğiniz ihale" name="search">
+                            <span class="input-group-btn">
+                                <button type="submit" class="button-search btn btn-primary" name="submit_search"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                        <input type="hidden" name="route" value="product/search" />
+                    </form>
+                </div>
+                <!-- //end Search -->
+                <!-- Secondary menu -->
+            </div>
+
+        </div>
+    </div>
+    <!-- //Header center -->
+    <!-- Header Bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+
+                <div class="sidebar-menu col-md-3 col-sm-6 col-xs-12 ">
+                    <div class="responsive so-megamenu ">
+                        <div class="so-vertical-menu no-gutter">
+                            <nav class="navbar-default">
+
+                                <div class="container-megamenu vertical">
+                                    <div id="menuHeading">
+                                        <div class="megamenuToogle-wrapper">
+                                            <div class="megamenuToogle-pattern">
+                                                <div class="container">
+                                                    <div>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    Tüm Kategoriler
+                                                    <i class="fa pull-right arrow-circle fa-chevron-circle-up"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @*@Html.Action("CategoryPartial", "Category")*@
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Main menu -->
+                <div class="megamenu-hori header-bottom-right  col-md-9 col-sm-6 col-xs-12 ">
+                    <div class="responsive so-megamenu ">
+                        <nav class="navbar-default">
+                            <div class=" container-megamenu horizontal">
+                                <div class="navbar-header">
+                                    <button type="button" id="show-megamenu" data-toggle="collapse" class="navbar-toggle">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    Menu
+                                </div>
+
+                                <div class="megamenu-wrapper">
+                                    <span id="remove-megamenu" class="fa fa-times"></span>
+                                    <div class="megamenu-pattern">
+                                        <div class="container">
+                                            <ul class="megamenu" data-transition="slide" data-animationtime="250">
+                                                <li class="home">
+                                                    <a href="@Url.Action("Index","Home")">Anasayfa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("CategoryProduct","Category")" class="clearfix">
+                                                        <span class="label label-hot" style="top:0">Fırsat</span>
+                                                        <strong>Son Dakika</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("CategoryProduct","Category")" class="clearfix">
+                                                        <strong>Sıfır İlanlar</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("AboutUs","Site")" class="clearfix">
+                                                        <strong>Hakkımızda</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("Contact","Site")" class="clearfix">
+                                                        <strong>İletişim</strong>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("Blogs","Blog")" class="clearfix">
+                                                        <strong>Blog</strong>
+                                                    </a>
+                                                </li>
+                                                <li style="background-color: #F4A137">
+                                                    <a href="@Url.Action("NewAuction","Auction")" class="clearfix">
+                                                        <strong>İlan Ver</strong>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- //end Main menu -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navbar switcher -->
+    <!-- //end Navbar switcher -->
+</header>
+<!-- //Header Container  -->
+
+
+
+@RenderBody()
+
+    <!--Search Modal-->
+    <div id="miniSearch" class="modal fade" style="margin-top:30px" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Arama</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text" placeholder="Aramak istediğiniz ihale" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-int" data-dismiss="modal">Ara</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End Search Modal-->
+
+
+<!-- Footer Container -->
+<footer class="footer-container type_footer1">
+    <!-- Footer Top Container -->
+    <section class="footer-top">
+        <div class="container content">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 box-information">
+                    <div class="module clearfix">
+                        <h3 class="modtitle">Site</h3>
+                        <div class="modcontent">
+                            <ul class="menu">
+                                <li><a href="@Url.Action("AboutUs","Site")">Hakkımızda</a></li>
+                                <li><a href="@Url.Action("Faq","Site")">S.S.S</a></li>
+                                <li><a href="@Url.Action("Blogs","Blog")">Yeni Bloglar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 box-service">
+                    <div class="module clearfix">
+                        <h3 class="modtitle">Harita</h3>
+                        <div class="modcontent">
+                            <ul class="menu">
+                                <li><a href="@Url.Action("Contact","Site")">İletişim</a></li>
+                                <li><a href="#">Site Haritası</a></li>
+                                <li><a href="@Url.Action("Profil","Account")">Hesabım</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 box-account">
+                    <div class="module clearfix">
+                        <h3 class="modtitle">Hesabım</h3>
+                        <div class="modcontent">
+                            <ul class="menu">
+                                <li><a href="@Url.Action("Profil","Account")">Profilim</a></li>
+                                <li><a href="@Url.Action("Auctions","Auction")">İlanlarım</a></li>
+                                <li><a href="@Url.Action("Offers","Offer")">Tekliflerim</a></li>
+                                <li><a href="@Url.Action("NewAuction","Auction")">İlan Ver</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 collapsed-block ">
+                    <div class="module clearfix">
+                        <h3 class="modtitle">İletişim Bilgileri</h3>
+                        <div class="modcontent">
+                            <ul class="contact-address">
+                                <li><span class="fa fa-map-marker"></span> My Company, 42 avenue des Champs Elysées 75000 Paris France</li>
+                                <li><span class="fa fa-envelope-o"></span> Email: <a href="#"> sales@yourcompany.com</a></li>
+                                <li><span class="fa fa-phone">&nbsp;</span> Phone 1: 0123456789 <br>Phone 2: (123) 4567890</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /Footer Top Container -->
+    <!-- Footer Bottom Container -->
+    <div class="footer-bottom-block ">
+        <div class=" container">
+            <div class="row">
+                <div class="col-sm-5 copyright-text"> © 2018 Powered by Lounge. </div>
+                <div class="col-sm-7">
+                    <div class="block-payment text-right"><img src="~/Content/image/demo/content/payment.png" alt="payment" title="payment"></div>
+                </div>
+                <!--Back To Top-->
+                <div class="back-to-top"><i class="fa fa-angle-up"></i><span> Yukarı </span></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /Footer Bottom Container -->
+
+
+</footer>
+<!-- //end Footer Container -->
+
+</div>
+
+
+
+
+<script src="~/Scripts/HomeScripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/HomeScripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/HomeScripts/owl.carousel.js"></script>
+    <script src="~/Scripts/HomeScripts/libs.js"></script>
+    <script src="~/Scripts/HomeScripts/jquery.unveil.js"></script>
+    <script src="~/Scripts/HomeScripts/jquery.countdown.min.js"></script>
+    <script src="~/Scripts/HomeScripts/jquery.dcjqaccordion.2.8.min.js"></script>
+    <script src="~/Scripts/HomeScripts/moment.js"></script>
+    <script src="~/Scripts/HomeScripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Scripts/HomeScripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/HomeScripts/modernizr-2.6.2.min.js"></script>
+    <script src="~/Scripts/HomeScripts/jquery.miniColors.min.js"></script>
+    <script src="~/Scripts/HomeScripts/application.js"></script>
+    @RenderSection("homeScripts", required: false)
+    <script src="~/Scripts/HomeScripts/toppanel.js"></script>
+    <script src="~/Scripts/HomeScripts/so_megamenu.js"></script>
+    <script src="~/Scripts/HomeScripts/addtocart.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

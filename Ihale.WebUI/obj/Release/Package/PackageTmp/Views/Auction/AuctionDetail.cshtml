@@ -1,0 +1,189 @@
+﻿
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Kategori Adı</a></li>
+        <li><a href="#">Ürün Adı</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-md-12 col-sm-12">
+
+            <div class="product-view row">
+                <div class="left-content-product col-lg-10 col-xs-12">
+                    <div class="row">
+                        <div class="content-product-left  col-sm-7 col-xs-12 ">
+                            <div id="thumb-slider-vertical" class="thumb-vertical-outer">
+                                <span class="btn-more prev-thumb nt"><i class="fa fa-angle-up"></i></span>
+                                <span class="btn-more next-thumb nt"><i class="fa fa-angle-down"></i></span>
+                                <ul class="thumb-vertical">
+                                    <li class="owl2-item">
+                                        <a data-index="0" class="img thumbnail" data-image="../../Content/image/demo/shop/product/J9.jpg" title="Canon EOS 5D">
+                                            <img src="../../Content/image/demo/shop/product/J9.jpg" title="Canon EOS 5D" alt="Canon EOS 5D">
+                                        </a>
+                                    </li>
+
+                                    <li class="owl2-item">
+                                        <a data-index="2" class="img thumbnail" data-image="../../Content/image/demo/shop/product/J5.jpg" title="Bint Beef">
+                                            <img src="../../Content/image/demo/shop/product/J5.jpg" title="Bint Beef" alt="Bint Beef">
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+                            <div class="large-image  vertical">
+                                <img itemprop="image" class="product-image-zoom" src="../../Content/image/demo/shop/product/J9.jpg" data-zoom-image="../../Content/image/demo/shop/product/J9.jpg" title="Bint Beef" alt="Bint Beef">
+                            </div>
+
+                        </div>
+                        <div class="content-product-right col-sm-5 col-xs-12">
+                            <div class="title-product text-center">
+                                <h1>Bint Beef</h1>
+                            </div>
+                            <!-- Review ---->
+                            <div class="box-review form-group">
+                                <div data-countdown="2018/09/19 15:22:00" class="clock row">
+
+                                </div><!-- /.clock -->
+                            </div>
+                            <div class="product-label form-group">
+                                <div class="price">
+                                    <span class="price-new">70.00 ₺ - 200.00 ₺</span>
+                                </div>
+                                <div class="stock"><span><a class="write_review_button" href="#" onclick="$('a[href=\'#tab-review\']').trigger('click');return false;">Alıcı Yorumları</a></span></div>
+                            </div>
+                            <div class="product-box-desc">
+                                <div class="inner-box-desc">
+                                    <h5><b> Ozellik 1 : </b> Aciklama </h5>
+                                    <h5><b> Ozellik 2 : </b> Aciklama </h5>
+                                    <h5><b> Ozellik 3 : </b> Aciklama </h5>
+                                    <h5><b> Ozellik 4 : </b> Aciklama </h5>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <div id="product">
+
+                                <div class="form-group box-info-product">
+
+                                    <div class="cart wishlist">
+                                        <label for="off"><b> Teklifin</b></label>
+                                        <div class="input-group">
+                                            <input class="form-control" id="off" type="number" pattern="\d*" style="color: black; background-color: white" />
+                                            <span class="input-group-btn">
+                                                <button class="btn"> ₺ </button>
+                                            </span>
+                                        </div>
+                                        <br />
+                                        <input type="button" value="Teklif Ver" id="button-cart" class="btn btn-mega btn-lg pull-right">
+
+                                        @*<input style="background-color: white;color:black" class="btn addToCart" type="button" data-toggle="tooltip" title="En düşük Teklifi Gör" value="En Düşük Teklifi Gör">*@
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- end box info product -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="col-lg-2 hidden-sm hidden-md hidden-xs slider-products">
+                    <div class="module col-sm-12 four-block">
+                        <div class="modcontent clearfix">
+                            <div class="policy-detail">
+                                <div class="banner-policy text-center">
+                                    <div class="policy policy4">
+                                        <a href="#">
+                                            <span class="ico-policy">&nbsp;</span>	70 Kişi
+                                            <br> gördü
+                                        </a>
+                                    </div>
+                                    <div class="policy policy2">
+                                        <a href="#"> <span class="ico-policy">&nbsp;</span>	40 kişi <br /> teklif verdi </a>
+                                    </div>
+                                    <div class="policy policy3">
+                                        <a href="#"> <span class="ico-policy">&nbsp;</span> Şimdi Sıra Sende </a>
+                                    </div>
+                                    <div class="policy policy1">
+                                        <a href="#"> <span class="ico-policy">&nbsp;</span>	Hemen Teklif <br /> Ver </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!-- Product Tabs -->
+            <div class="producttab ">
+                <div class="tabsslider  vertical-tabs col-xs-12">
+                    <ul class="nav nav-tabs col-lg-2 col-sm-3">
+                        <li class="active"><a data-toggle="tab" href="#tab-1">Açıklama</a></li>
+                        <li class="item_nonactive"><a data-toggle="tab" href="#tab-review">Yorumlar (1)</a></li>
+                        <li class="item_nonactive"><a data-toggle="tab" href="#tab-4">Etiketler</a></li>
+                    </ul>
+                    <div class="tab-content col-lg-10 col-sm-9 col-xs-12">
+                        <div id="tab-1" class="tab-pane fade active in">
+
+                            Ürün Açıklamaları
+
+                        </div>
+                        <div id="tab-review" class="tab-pane fade">
+                            <form>
+                                <div id="review">
+                                    <table class="table table-striped table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 50%;"><strong>Super Administrator</strong></td>
+                                                <td class="text-right">29/07/2015</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p>Best this product opencart</p>
+                                                    <div class="ratings">
+                                                        <div class="rating-box">
+                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade">
+                            <a href="#">Monitor</a>,
+                            <a href="#">Apple</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Product Tabs -->
+
+
+        </div>
+
+
+    </div>
+    <!--Middle Part End-->
+</div>
+
+@section scripts
+{
+
+    <script src="~/Scripts/HomeScripts/ProductDetailImageScript.js"></script>
+}

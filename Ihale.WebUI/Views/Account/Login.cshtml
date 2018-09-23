@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head
+{
+    <title>Mıknatısla - Giriş Yap</title>
+}
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Hesap</a></li>
+        <li><a href="#">Giriş Yap</a></li>
+    </ul>
+
+    <div class="row">
+        <div id="content" class="col-sm-12">
+            <div class="page-login">
+
+                <div class="account-border">
+                    <div class="row">
+                        <div class="col-sm-6 new-customer">
+                            <div class="well">
+                                <h2><i class="fa fa-file-o" aria-hidden="true"></i> Kayıt Ol</h2>
+                                <p>Aradığın ürünün seni bulması veya ürününü satmak için hemen ücretsiz kayıt ol.</p>
+                            </div>
+                            <div class="bottom-form">
+                                <a href="@Url.Action("Register","Account")" class="btn btn-default pull-right">Kayıt Ol</a>
+                            </div>
+                        </div>
+
+                        <form action="@Url.Action("Login","Account")" method="post">
+                            <div class="col-sm-6 customer-login">
+                                <div class="well">
+                                    <p><h2><i class="fa fa-file-text-o" aria-hidden="true"></i> Giriş Yap </h2> veya <a href="#">Instagram ile Bağlan</a></p>
+                                    <div class="form-group">
+                                        <label class="control-label " for="input-email">Kullanıcı Adı</label>
+                                        <input type="text" name="userName" value="" id="input-email" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label " for="input-password">Şifre</label>
+                                        <input type="password" name="password" value="" id="input-password" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="bottom-form">
+                                    <a href="@Url.Action("ForgetPassword","Account")" class="forgot">Şifremi Unuttum</a>
+                                    <input type="submit" value="Giriş" class="btn btn-default pull-right" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

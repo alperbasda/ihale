@@ -1,0 +1,102 @@
+﻿<!-- Filters -->
+<div class="product-filter filters-panel">
+    <div class="row">
+        <div class="col-md-2 visible-lg">
+            <div class="view-mode">
+                <div class="list-view">
+                    <button class="btn btn-default grid " data-view="grid" data-toggle="tooltip" data-original-title="Grid"><i class="fa fa-th"></i></button>
+                    <button class="btn btn-default list active" data-view="list" data-toggle="tooltip" data-original-title="List"><i class="fa fa-th-list"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="short-by-show form-inline text-right col-md-7 col-sm-8 col-xs-12">
+
+        </div>
+        <div class="box-pagination col-md-3 col-sm-4 col-xs-12 text-right">
+            <ul class="pagination">
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">&gt;</a></li>
+                <li><a href="#">&gt;|</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //end Filters -->
+<!--changed listings-->
+<div class="products-list row list">
+    @for (int i = 0; i < 6; i++)
+    {
+        <div class="product-layout col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+
+            <div class="module">
+                <div class="modcontent clearfix">
+                    <div id="so_deals_308741472747190" class="so-deal preset00-1 preset01-1 preset02-1 preset03-1 preset04-1 button-type1 grid">
+                        <div class="extraslider-inner grid">
+                            <div class="ltabs-item product-layout">
+                                <div class="product-item-container">
+                                    <div class="left-block">
+                                        <div class="product-image-container second_img ">
+                                            <img src="../../Content/image/demo/shop/product/B10.jpg" alt="Apple Cinema 30&quot;" class="img-responsive" />
+                                        </div>
+                                        <!--Sale Label-->
+
+                                        <div class="countdown_box">
+                                            <div class="countdown_inner">
+                                                <div class="title">Kalan Süre </div>
+
+                                                <div data-countdown="2019/03/13">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="right-block">
+                                        <div class="caption text-center">
+
+                                            <h4><a href="product.html">Urun Adi</a></h4>
+                                            <h5><b> Ozellik 1 : </b> Aciklama </h5>
+                                            <h5><b> Ozellik 2 : </b> Aciklama </h5>
+                                            <h5><b> Ozellik 3 : </b> Aciklama </h5>
+                                            <h5><b> Ozellik 4 : </b> Aciklama </h5>
+                                            <div class="price">
+                                                <span class="price-new">70.00 ₺ - 200.00 ₺</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="button-group text-center">
+                                            <a href="@Url.Action("AuctionDetail","Auction")"><button class="addToCart" type="button"><i class="fa fa-magnet"></i><span> Teklif Ver</span></button></a>
+                                            @*<button class="addToCart" type="button" data-toggle="tooltip" title="Detay"><i class="fa fa-info"></i><span class="hidden-xs"> Detay</span></button>*@
+                                        </div>
+                                    </div><!-- right block -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+
+
+
+</div>
+<!--// End Changed listings-->
+<!-- Filters -->
+<div class="product-filter product-filter-bottom filters-panel">
+    <div class="row">
+        <div class="col-md-2 hidden-sm hidden-xs">
+
+        </div>
+        <div class="short-by-show text-center col-md-7 col-sm-8 col-xs-12">
+            <div class="form-group" style="margin: 7px 10px">Toplam 260 ürün 28 sayfa</div>
+        </div>
+        <div class="box-pagination col-md-3 col-sm-4 text-right"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="#">2</a></li><li><a href="#">&gt;</a></li><li><a href="#">&gt;|</a></li></ul></div>
+
+    </div>
+</div>
+<!-- //end Filters -->
+
+

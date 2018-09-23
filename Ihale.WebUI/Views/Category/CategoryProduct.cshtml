@@ -1,0 +1,412 @@
+﻿
+@{
+    ViewBag.Title = "CategoryProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Kategori Adı</a></li>
+    </ul>
+
+    <div class="row">
+
+        <!--Middle Part Start-->
+        <div id="content" class="col-md-9 col-sm-8">
+            <div class="products-category">
+                <div class="category-derc form-group">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><img src="../../Content/image/demo/shop/category/electronic-cat.png" alt="Apple Cinema 30&quot;"><br></p>
+                            <p>Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Vestibulum sed ante. Donec sagittis euismod purus. Sed ut perspiciatis sit voluptatem accusantim doloremque laudantim.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--- Subcategories - -->
+                <div class="refine-search form-group">
+                    <div class="row">
+                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
+                            <a href="#" class="thumbnail"><img src="../../Content/image/demo/shop/product/m2.jpg" alt="Car Alarms and Security"></a> <a href="#">Alt kategori</a>
+                        </div>
+                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
+                            <a href="#" class="thumbnail"><img src="../../Content/image/demo/shop/product/E2.jpg" alt="Car Audio &amp; Speakers"></a> <a href="#">Alt kategori</a>
+                        </div>
+                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
+                            <a href="#" class="thumbnail"><img src="../../Content/image/demo/shop/product/10.jpg" alt="Gadgets &amp; Auto Parts">	</a> <a href="#">Alt kategori</a>
+                        </div>
+                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
+                            <a href="#" class="thumbnail"><img src="../../Content/image/demo/shop/product/18.jpg" alt="More Car Accessories">	</a> <a href="#">Alt kategori</a>
+                        </div>
+                        <div class="form-group col-md-15 col-sm-4 col-xs-12 ">
+                            <a href="#" class="thumbnail"><img src="../../Content/image/demo/shop/product/19.jpg" alt="More Car Accessories">	</a> <a href="#">Alt kategori</a>
+                        </div>
+                    </div>
+                </div>
+                <!---//Subcategories - -->
+                @Html.Action("CategoryInAuctions", "Auction")
+            </div>
+
+        </div>
+        <!--Right Part Start -->
+        <aside class="col-sm-4 col-md-3 hidden-xs" id="column-left">
+
+        <div class="module latest-product titleLine filterModule">
+            <h3 class="modtitle">Filtre </h3>
+            <div class="modcontent ">
+                <form class="type_2">
+                    <div class="table_layout filter-shopby">
+                        <div class="table_row">
+                            <!-- - - - - - - - - - - - - - Category filter - - - - - - - - - - - - - - - - -->
+                            <div class="table_cell" style="z-index: 103;">
+                                <legend>Arama</legend>
+                                <input class="form-control" type="text" value="" size="50" autocomplete="off" placeholder="Ürün Adı Giriniz" name="search">
+                            </div><!--/ .table_cell -->
+                            <!-- - - - - - - - - - - - - - End of category filter - - - - - - - - - - - - - - - - -->
+                            <!-- - - - - - - - - - - - - - SUB CATEGORY - - - - - - - - - - - - - - - - -->
+                            <div class="table_cell">
+                                <fieldset>
+                                    <legend>Alt Ketegoriler</legend>
+                                    <ul class="checkboxes_list">
+                                        <li>
+                                            <input type="checkbox" checked="" name="category" id="category_1">
+                                            <label for="category_1">Aksesuar</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="category" id="category_2">
+                                            <label for="category_2">Elektronik</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="category" id="category_3">
+                                            <label for="category_3">Ayakkabı</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="category" id="category_4">
+                                            <label for="category_4">Giyim</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div><!--/ .table_cell -->
+                            <!-- - - - - - - - - - - - - - End SUB CATEGORY - - - - - - - - - - - - - - - - -->
+                            <!-- - - - - - - - - - - - - - Manufacturer - - - - - - - - - - - - - - - - -->
+                            <div class="table_cell">
+                                <fieldset>
+                                    <legend>Temel Filtreler</legend>
+                                    <ul class="checkboxes_list">
+                                        <li>
+                                            <input type="checkbox" checked="" name="manufacturer" id="manufacturer_1">
+                                            <label for="manufacturer_1">Filtre 1</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="manufacturer" id="manufacturer_2">
+                                            <label for="manufacturer_2">Filtre 2</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="manufacturer" id="manufacturer_3">
+                                            <label for="manufacturer_3">Filtre 3</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div><!--/ .table_cell -->
+                            <!-- - - - - - - - - - - - - - End manufacturer - - - - - - - - - - - - - - - - -->
+                            <!-- - - - - - - - - - - - - - Price - - - - - - - - - - - - - - - - -->
+                            <div class="table_cell">
+                                <fieldset>
+                                    <legend>Fiyat</legend>
+                                    <div class="range">
+                                        Aralık :
+                                        <span class="min_val">100 ₺</span> -
+                                        <span class="max_val">500 ₺</span>
+                                        <input type="hidden" name="" class="min_value" value="100">
+                                        <input type="hidden" name="" class="max_value" value="500">
+                                    </div>
+                                    <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                                        <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                                    </div>
+                                </fieldset>
+                            </div><!--/ .table_cell -->
+                            <!-- - - - - - - - - - - - - - End price - - - - - - - - - - - - - - - - -->
+                            <!-- - - - - - - - - - - - - - Price - - - - - - - - - - - - - - - - -->
+                            <div class="table_cell">
+                                <fieldset>
+                                    <legend>Color</legend>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <ul class="simple_vertical_list">
+                                                <li>
+
+                                                    <input type="checkbox" name="" id="color_btn_1">
+                                                    <label for="color_btn_1" class="color_btn green">Green</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="" id="color_btn_2">
+                                                    <label for="color_btn_2" class="color_btn yellow">Yellow</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="" id="color_btn_3">
+                                                    <label for="color_btn_3" class="color_btn red">Red</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+
+                                            <ul class="simple_vertical_list">
+                                                <li>
+                                                    <input type="checkbox" name="" id="color_btn_4">
+                                                    <label for="color_btn_4" class="color_btn blue">Blue</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="" id="color_btn_5">
+                                                    <label for="color_btn_5" class="color_btn grey">Grey</label>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="" id="color_btn_6">
+                                                    <label for="color_btn_6" class="color_btn orange">Orange</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div><!--/ .table_cell -->
+                            <!-- - - - - - - - - - - - - - End price - - - - - - - - - - - - - - - - -->
+                        </div><!--/ .table_row -->
+                        <footer class="bottom_box">
+                            <div class="buttons_row">
+                                <button type="submit" class="button_grey button_submit">Ara</button>
+                                <button type="reset" class="button_grey filter_reset">Sıfırla</button>
+                            </div>
+                        </footer>
+                    </div><!--/ .table_layout -->
+
+                </form>
+            </div>
+
+        </div>
+        
+     
+        @*<div class="module latest-product titleLine">
+                    <h3 class="modtitle">Son Baktıklarınız</h3>
+                    <div class="modcontent">
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/m1.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height: 82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Sunt Molup</a></h4>
+
+                                        <div class="price">
+                                            <span class="price-new">$100.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/m2.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height: 82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Et Spare</a></h4>
+
+                                        <div class="price">
+                                            <span class="price-new">$99.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/18.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height: 82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Cisi Chicken</a></h4>
+
+                                        <div class="price">
+                                            <span class="price-new">$59.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/9.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height:82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Kevin Labor</a></h4>
+                                        <div class="price">
+                                            <span class="price-new">$245.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/10.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height:82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Kevin Labor</a></h4>
+                                        <div class="price">
+                                            <span class="price-new">$245.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-latest-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#"><img src="../../Content/image/demo/shop/product/11.jpg" alt="Cisi Chicken" title="Cisi Chicken" class="img-responsive" style="width: 100px; height:82px;"></a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="caption">
+                                        <h4><a href="#">Kevin Labor</a></h4>
+                                        <div class="price">
+                                            <span class="price-new">$245.00</span>
+                                        </div>
+                                        <div class="ratings">
+                                            <div class="rating-box">
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>*@
+            @*<div class="module tags-product titleLine">
+                    <h3 class="modtitle">Tags</h3>
+                    <div class="modcontent ">
+                        <ul class="tags_cloud">
+                            <li><a href="#" class="button_grey">allergy</a></li>
+                            <li><a href="#" class="button_grey">baby</a></li>
+                            <li><a href="#" class="button_grey">beauty</a></li>
+                            <li><a href="#" class="button_grey">ear care</a></li>
+                            <li><a href="#" class="button_grey">for her</a></li>
+                            <li><a href="#" class="button_grey">for him</a></li>
+                            <li><a href="#" class="button_grey">first aid</a></li>
+                            <li><a href="#" class="button_grey">gift sets</a></li>
+                            <li><a href="#" class="button_grey">spa</a></li>
+                            <li><a href="#" class="button_grey">hair care</a></li>
+                            <li><a href="#" class="button_grey">herbs</a></li>
+                            <li><a href="#" class="button_grey">medicine</a></li>
+                            <li><a href="#" class="button_grey">natural</a></li>
+                            <li><a href="#" class="button_grey">oral care</a></li>
+                            <li><a href="#" class="button_grey">pain</a></li>
+                            <li><a href="#" class="button_grey">pedicure</a></li>
+                            <li><a href="#" class="button_grey">personal care</a></li>
+                            <li><a href="#" class="button_grey">probiotics</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>*@
+        </aside>
+        <!--Right Part End -->
+
+
+    </div>
+    <!--Middle Part End-->
+</div>
+<!--Filter Modal-->
+<div id="filters" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Filtre Seçin</h4>
+            </div>
+            <div class="modal-body">
+                <p>Yükleniyor Lütfen Bekleyin...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--End Filter Modal-->
+
+
+@section scripts
+{
+    <script src="~/Scripts/HomeScripts/ProductShowCount.js"></script>
+    <script src="~/Scripts/HomeScripts/CategoryAuctionPageScript.js"></script>
+}
+

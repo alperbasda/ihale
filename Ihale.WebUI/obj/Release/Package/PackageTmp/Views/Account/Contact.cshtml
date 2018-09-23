@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="@Url.Action("Profil","Account")">Hesabım</a></li>
+        <li><a href="#">İletişim Bilgilerim</a></li>
+    </ul>
+    <div class="row">
+    <h2>İletişim Bilgilerim</h2>
+    <p>İletişim bilgilerinizi onaylayın istediğiniz ürünü mıknatıslayın !!!</p>
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Adreslerim</a></li>
+        <li><a data-toggle="tab" href="#menu1">Telefonlarım</a></li>
+        <li><a data-toggle="tab" href="#menu2">Mail Adreslerim</a></li>
+    </ul>
+
+        <div class="tab-content col-sm-9">
+            <div id="home" class="tab-pane fade in active">
+                <fieldset>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>Ev Adresim</h3>
+                            <p>Gökmeydan mah. Orkide sk. no37/1 <br/> Eskişehir</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px">
+                                <tr>
+                                    <td><b> Tip : </b></td>
+                                    <td>&nbsp;<span>Kargo Adresi</span></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>İş Adresim</h3>
+                            <p>Gökmeydan mah. Orkide sk. no37/1 <br/> Eskişehir</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px">
+                                <tr>
+                                    <td><b> Tip : </b></td>
+                                    <td>&nbsp;<span>Fatura Adresi</span></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>2. Ev Adresim</h3>
+                            <p>Gökmeydan mah. Orkide sk. no37/1 <br/> Eskişehir</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px">
+                                <tr>
+                                    <td><b> Tip : </b></td>
+                                    <td>&nbsp;<span><a href="#"> Kargo Adresi Ata</a> / <a href="#"> Fatura Adresi Ata</a></span></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        
+                            <label for="adres"><b>Adres</b></label>
+                            <textarea type="text" id="adres" class="form-control" placeholder="Yeni Adres Yazın" rows="4" ></textarea>
+                            <div class="form-group">
+                                <label for="sehir"><b>Şehir</b></label>
+                                <select class="form-control" id="sehir">
+                                    <option>Eskişehir</option>
+                                    <option>Kütahya</option>
+                                    <option>İstanbul</option>
+                                </select>
+                            </div>
+                            <button style="margin-top: 60px;" class="btn btn-primary pull-right">Kaydet</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <fieldset>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>0551 432 73 31</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span>Onaylı</span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span>Kullanımda</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>0222 240 26 26</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span>Onaylı</span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span><a href="#">Kullanılan Ata</a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>0533 85 32 45</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span><a href="@Url.Action("TelephoneApprove","Contact")">Onayla</a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span><a href="#">Kullanılan Ata</a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        <div class="col-sm-6">
+                            <label for="tel"><b>Telefon</b></label>
+                            <input id="tel" type="text" class="form-control" placeholder="Yeni Telefon Numarası Yazın"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <button style="margin-top: 25px" class="btn btn-primary">Kaydet</button>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <fieldset>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>info@alperbasda.com</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span>Onaylı</span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span>Kullanımda</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>alperbasda@gmail.com</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span>Onaylı</span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span><a href="#">Kullanılan Ata</a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="border-bottom: 1px solid #F4A137">
+                        <div class="col-sm-6">
+                            <h3>alperbasda@hotmail.com</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <table style="margin-top: 20px; margin-bottom: 20px">
+                                <tr>
+                                    <td><b> Durum : </b></td>
+                                    <td>&nbsp;<span><a href="@Url.Action("MailApprove","Contact")">Onayla</a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><b> Kullanım : </b></td>
+                                    <td>&nbsp;<span><a href="#">Kullanılan Ata</a></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        <div class="col-sm-6">
+                            <label for="tel"><b>Mail Adresi</b></label>
+                            <input type="text" class="form-control" placeholder="Yeni Mail Adresinizi Yazın"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary" style="margin-top:25px">Kaydet</button>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+        @Html.Action("RightPartial","Account")
+    </div>
+</div>

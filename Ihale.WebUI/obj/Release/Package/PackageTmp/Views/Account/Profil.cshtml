@@ -1,0 +1,117 @@
+﻿@using Ihale.Entity.Concrete
+@model User
+@{
+    ViewBag.Title = "Profil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="@Url.Action("Profil","Account")">Hesabım</a></li>
+    </ul>
+    <div class="row">
+        <!--Middle Part Start-->
+        <div class="col-sm-9" id="content">
+            <h2 class="title">Hesabım</h2>
+            <p class="lead">Merhaba, <strong>Alper Başda!</strong> - Profilini buradan düzenleyebilirsin.</p>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <fieldset id="personal-details">
+                            <legend>Kişisel Bilgiler</legend>
+                            <div class="form-group required">
+                                <label for="input-firstname" class="control-label">Ad</label>
+                                <input type="text" class="form-control" id="input-firstname" value="Alper" name="FirstName">
+                            </div>
+                            <div class="form-group required">
+                                <label for="input-lastname" class="control-label">Soyad</label>
+                                <input type="text" class="form-control" id="input-lastname" value="Başda" name="LastName">
+                            </div>
+                            <div class="form-group required">
+                                <label for="input-lastname" class="control-label">Doğum Tarihi</label>
+                                <input type="date" class="form-control" value="@string.Format("{0:dd/MM/yyyy}", new DateTime(1919,05,19))" name="BirthDay">
+                            </div>
+                            <div class="form-group required">
+                                <label for="input-lastname" class="control-label">Cinsiyet &nbsp;</label>
+                                <label class="radio-inline">
+                                    <input type="radio" checked="checked" value="" name="Gender"> Erkek
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" value="" name="Gender"> Kadın
+                                </label>
+
+
+                                <br />
+                            </div>
+                            <div class="buttons clearfix">
+                                <div class="">
+                                    <input type="submit" class="btn col-sm-12 btn-primary" value="Kaydet">
+                                </div>
+                            </div>
+                            <br />
+
+
+                        </fieldset>
+                        <br />
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Kullanılan E-Posta Adresi</legend>
+                            <div class="form-group required">
+                                <span>alperbasda@gmail.com <label><a href="#">Değiştir</a></label></span>
+                            </div>
+
+                            <legend>Kullanılan Telefon</legend>
+                            <div class="form-group required">
+                                <span>0551 432 73 31 <label><a href="#">Değiştir</a></label></span>
+                            </div>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>Yeniliklerden haberdar olun!!!</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-3 control-label">Mail Bildirimleri</label>
+                                <div class="col-md-10 col-sm-9 col-xs-9">
+                                    <label class="radio-inline">
+                                        <input type="radio" value="1" name="newsletter"> Açık
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" checked="checked" value="0" name="newsletter"> Kapalı
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <fieldset id="address">
+                            <legend>Fatura Adresim</legend>
+                            <div class="form-group required">
+                                <span> Gökmeydan mahallede Orkide sokak 37/1 Eskişehir <label><a href="#">Değiştir</a></label> </span>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset id="address">
+                            <legend>Kargo Adresim</legend>
+                            <div class="form-group required">
+                                <span> Gökmeydan mahallede Orkide sokak 37/1 Eskişehir <label><a href="#">Değiştir</a></label></span>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!--Middle Part End-->
+        @Html.Action("RightPartial","Account")
+    </div>
+</div>
+@section scripts
+{
+    <script src="~/Scripts/HomeScripts/Profile.js"></script>
+}

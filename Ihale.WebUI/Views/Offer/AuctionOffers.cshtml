@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "AuctionOffers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">İlan Teklifleri</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Middle Part Start-->
+        <div id="content" class="col-sm-9">
+            <h2 class="title">İlan Teklifleri</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td class="text-center">Resim</td>
+                            <td class="text-left">Ürün Adı</td>
+                            <td class="text-center">Acıklama</td>
+                            <td class="text-center">Teklif Tarihi</td>
+                            <td class="text-right">Fiyat</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../../Content/image/demo/shop/product/B8.jpg">
+                                    <img width="85" class="img-thumbnail" title="Aspire Ultrabook Laptop" alt="Aspire Ultrabook Laptop" src="../../Content/image/demo/shop/product/B8.jpg">
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="@Url.Action("AuctionDetail","Auction")">Aspire Ultrabook Laptop</a>
+                            </td>
+                            <td class="text-center">lorem impus sit amet</td>
+                            <td class="text-center">21/06/2016</td>
+                            <td class="text-right">300.00 ₺</td>
+                            <td class="text-center">
+                                <a class="btn btn-success" href="@Url.Action("DetailOffer","Offer")"><i class="fa fa-magic"></i> Kabul Et</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../../Content/image/demo/shop/product/B5.jpg">
+                                    <img width="85" class="img-thumbnail" title="Xitefun Causal Wear Fancy Shoes" alt="Xitefun Causal Wear Fancy Shoes" src="../../Content/image/demo/shop/product/B5.jpg">
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="@Url.Action("AuctionDetail","Auction")">Aspire Ultrabook Laptop</a>
+                            </td>
+                            <td class="text-center">lorem impus sit amet</td>
+                            <td class="text-center">21/06/2016</td>
+                            <td class="text-right">200.00 ₺</td>
+                            <td class="text-center">
+                                <a class="btn btn-success" href="@Url.Action("DetailOffer","Offer")"><i class="fa fa-magic"></i> Kabul Et</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="../../Content/image/demo/shop/product/B5.jpg">
+                                    <img width="85" class="img-thumbnail" title="Xitefun Causal Wear Fancy Shoes" alt="Xitefun Causal Wear Fancy Shoes" src="../../Content/image/demo/shop/product/B5.jpg">
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="@Url.Action("AuctionDetail","Auction")">Aspire Ultrabook Laptop</a>
+                            </td>
+                            <td class="text-center">Bekliyor</td>
+                            <td class="text-center">21/06/2016</td>
+                            <td class="text-right">300.00 ₺</td>
+                            <td class="text-center">
+                                <a class="btn btn-success" href="@Url.Action("DetailOffer","Offer")"><i class="fa fa-magic"></i> Kabul Et</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!--Middle Part End-->
+        @Html.Action("RightPartial", "Account")
+    </div>
+</div>

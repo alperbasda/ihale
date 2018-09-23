@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "NewAuction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Yeni İlan</a></li>
+    </ul>
+
+    <div class="panel panel-default related-comment">
+        <div class="panel-body">
+            <div class="form-group">
+                <div id="comments" class="blog-comment-info">
+
+                    <h3 id="review-title">Ne istediğinizden kısaca bahsedin ürün sizi bulsun. </h3>
+                    <input type="hidden" name="blog_article_reply_id" value="0" id="blog-reply-id">
+                    <div class="comment-left contacts-form row">
+                        <div class="col-md-12">
+                            <b>Kategori Seçin</b>
+                            <br>
+                            <select class="form-control">
+                                <option>kategori</option>
+                                <option>kategori</option>
+                                <option>kategori</option>
+                            </select>
+                            <br>
+                        </div>
+                        <div class="col-md-12">
+                            <b>İlan Adı:</b>
+                            <br>
+                            <input type="text" name="name" value="" class="form-control">
+                            <br>
+                        </div>
+                        <div class="col-md-12">
+                            <b>Max Fiyat:</b>
+                            <br>
+                            <input type="number" name="name" value="" class="form-control" pattern="\d*">
+                            <span style="font-size: 11px;">Not: Türk Lirası!</span>
+                            <br>
+                            <br />
+                        </div>
+                        <div class="col-md-12">
+                            <b>Min Fiyat:</b>
+                            <br>
+                            <input type="number" name="name" value="" class="form-control" pattern="\d*">
+                            <span style="font-size: 11px;">Not: Türk Lirası!</span>
+                            <br>
+                            <br />
+                        </div>
+                        <div class="col-md-12">
+                            <b>İlan Bitiş Tarihi:</b>
+                            <br>
+                            <input type="datetime-local" name="name" value="" class="form-control">
+                            <span style="font-size: 11px;">Not: Maksimum 1 ay sonrası</span>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="col-md-12">
+                            <b>İlan Açıklaması:</b>
+                            <br>
+                            <textarea rows="6" name="text" class="form-control"></textarea>
+
+                        </div>
+                        <div class="col-md-12">
+                            <b>Resim Yükle </b>
+                            <span style="color:red">(opsiyonel)</span>
+                            <br/>
+                            <input type="button" id="up" class="btn btn-primary" value="Resim Seç">
+                            
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-left">
+                        <a id="button-comment"
+                           class="btn buttonGray"><span>Kaydet</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="file" style="display: none" id="upload" />
+
+@section scripts
+{
+    <script>
+        $('#up').click(function() {
+            $('#upload').click();
+        })
+    </script>
+}
